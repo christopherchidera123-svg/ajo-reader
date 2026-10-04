@@ -1,0 +1,265 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #182b29;
+  background: #948d8d;
+  font-family: Arial, sans-serif;
+}
+
+.page {
+  min-height: 100vh;
+}
+
+.setup-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.intro {
+  color: #f7f3e9;
+  background: #123c35;
+  padding: 12vh 11%;
+}
+
+.eyebrow {
+  color: #e3a82b;
+  margin: 0 0 12px;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.intro h1,
+.welcome h1 {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 1;
+}
+
+.intro > p:not(.eyebrow) {
+  max-width: 400px;
+  color: #d6e1dd;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 28px 0 48px;
+}
+
+.steps {
+  display: grid;
+  gap: 16px;
+  padding-left: 18px;
+  color: #d6e1dd;
+  border-left: 1px solid #709089;
+}
+
+.card {
+  width: min(470px, 88%);
+  margin: auto;
+  padding: 42px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 18px 45px #22222214;
+}
+
+h2 { 
+    margin: 0 0 28px; 
+    font-family: Georgia, serif; 
+    font-size: 29px; }
+label { 
+    display: block; 
+    margin: 18px 0 7px; 
+    color: #51625f; 
+    font-size: 13px; font-weight: bold; }
+
+input {
+  width: 100%;
+  padding: 13px;
+  color: #182b29;
+  font-size: 14px;
+  background: #fff;
+  border: 1px solid #d8ddd8;
+  border-radius: 7px;
+}
+
+input:focus {
+     outline: 2px solid #e3a82b; 
+     border-color: transparent; 
+    }
+
+.date-row { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; gap: 14px; }
+
+button {
+  padding: 14px 18px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  background: #123c35;
+  border: 0;
+  border-radius: 7px;
+}
+
+.card button { 
+    width: 100%; 
+    margin-top: 22px; 
+    font-size: 15px;
+ }
+
+.card button span 
+{ 
+    float: right; 
+    font-size: 20px; 
+    line-height: 14px; 
+}
+
+.form-message { 
+     min-height: 18px;
+     margin: 12px 0 0;
+      color: #b3342a; font-size: 13px; 
+    }
+
+.hidden { 
+    display: none; }
+
+.dashboard-page { 
+    max-width: 1050px; 
+    margin: auto; 
+    padding: 28px 38px; 
+}
+
+nav { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+.brand { 
+    color: #123c35; 
+    font-family: Georgia, serif; 
+    font-size: 28px; font-weight: 
+    bold; text-decoration: none; 
+}
+
+.brand span { 
+    color: #e3a82b;
+ }
+
+.text-button { 
+    padding: 8px 0; 
+    color: #123c35; 
+    background: transparent; 
+    text-decoration: underline; 
+}
+
+.welcome {
+     margin: 80px 0 38px; 
+    }
+
+.welcome h1 {
+    font-size: 48px;
+ }
+
+.welcome > p:last-child { 
+    color: #687773;
+ }
+
+.dashboard-grid { 
+    display: grid;
+    grid-template-columns: 1.1fr .9fr; 
+    gap: 22px;
+ }
+
+
+.summary-card,
+.members-card { 
+    padding: 32px;
+     background: white; 
+     border-radius: 15px; }
+
+.summary-card { 
+    color: #f9f6ee; 
+    background: #123c35; 
+}
+
+.summary-card h2 { 
+    margin-bottom: 42px; 
+    font-size: 32px; 
+}
+
+.amount { 
+    margin-bottom: 34px;
+ }
+
+.amount span { 
+    display: block; 
+    font-family: Georgia, 
+    serif; font-size: 45px; }
+    
+.amount small,
+.dates small { 
+    color: #c3d3ce; 
+    font-size: 10px; 
+    letter-spacing: 1px;
+ }
+
+.dates { 
+    
+    display: 
+    flex; gap: 55px; 
+}
+
+.dates strong { 
+    display: block; 
+    margin-top: 6px;
+     font-size: 14px; 
+    }
+
+.card-heading { 
+    display: flex; 
+    justify-content: space-between; 
+}
+
+.members-card h2 { 
+    margin-bottom: 18px; 
+    font-size: 25px; 
+}
+
+.count {
+  width: 29px;
+  height: 29px;
+  padding-top: 6px;
+  color: #123c35;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  background: #e8f0ed;
+  border-radius: 50%;
+}
+
+.member-list { min-height: 94px; margin: 0 0 20px; padding: 0; list-style: none; }
+.member-list li { padding: 12px 0; font-size: 14px; border-bottom: 1px solid #edf0ed; }
+.member-list li::before { content: ""; display: inline-block; width: 9px; height: 9px; margin-right: 10px; background: #e3a82b; border-radius: 50%; }
+.invite-form { display: flex; gap: 8px; }
+.invite-form input { padding: 10px; }
+.invite-form button { padding: 10px 14px; }
+.saved-note { margin-top: 25px; color: #7a8884; font-size: 12px; text-align: center; }
+
+@media (max-width: 700px) {
+  .setup-page,
+  .dashboard-grid { grid-template-columns: 1fr; }
+  .intro { min-height: 360px; padding: 65px 10%; }
+  .intro h1 { font-size: 48px; }
+  .intro > p:not(.eyebrow) { margin: 20px 0 30px; }
+  .card { margin: -25px auto 40px; padding: 28px; }
+  .dashboard-page { padding: 22px; }
+  .welcome { margin: 55px 0 30px; }
+  .welcome h1 { font-size: 38px; }
+  .date-row { grid-template-columns: 1fr; gap: 0; }
+  .dates { gap: 30px; }
+}

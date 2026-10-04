@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajo Circle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <section id="setup-page" class="setup-page">
+      <div class="intro">
+        <p class="eyebrow">SIMPLE GROUP SAVING</p><h1>Save better,<br>together.</h1>
+        <p>Create a savings circle for people you trust. Set the goal, invite your group, and stay on track.</p>
+        <div class="steps"><span>1. Create group</span><span>2. Invite members</span><span>3. Start saving</span></div>
+      </div>
+      <form id="setup-form" class="card" autocomplete="off">
+        <p class="eyebrow">CREATE YOUR AJO</p><h2>Let’s set up your group</h2>
+        <label for="owner-name">Your name</label><input id="owner-name" type="text" placeholder="e.g. Ada" required>
+        <label for="group-name">Group name</label><input id="group-name" type="text" placeholder="e.g. Family Savings" required>
+        <label for="amount">Amount each person saves (₦)</label><input id="amount" type="number" min="1" placeholder="e.g. 40000" required>
+        <div class="date-row"><div><label for="start-date">Start date</label><input id="start-date" type="date" required></div><div><label for="end-date">End date</label><input id="end-date" type="date" required></div></div>
+        <p id="form-message" class="form-message"></p><button type="submit">Create my group <span>→</span></button>
+      </form>
+    </section>
+    <section id="dashboard-page" class="dashboard-page hidden">
+      <nav><a class="brand" href="#">ajo<span>.</span></a><button id="start-over" class="text-button">Start over</button></nav>
+      <div class="welcome"><p class="eyebrow">YOUR SAVINGS CIRCLE</p><h1>Hello, <span id="display-name"></span> 👋</h1><p>Here is how your group is doing.</p></div>
+      <div class="dashboard-grid">
+        <article class="summary-card"><p class="eyebrow">GROUP SAVING</p><h2 id="display-group"></h2><div class="amount"><span id="display-amount"></span><small>each member</small></div><div class="dates"><div><small>STARTS</small><strong id="display-start"></strong></div><div><small>ENDS</small><strong id="display-end"></strong></div></div></article>
+        <article class="members-card"><div class="card-heading"><div><p class="eyebrow">MEMBERS</p><h2>Your circle</h2></div><span id="member-count" class="count">1</span></div><ul id="member-list" class="member-list"></ul><form id="invite-form" class="invite-form"><input id="member-name" type="text" placeholder="Enter a name to invite" required><button type="submit">Invite</button></form></article>
+      </div><p class="saved-note">Your group is saved on this device.</p>
+    </section>
+  </main><script src="index.js"></script>
+</body>
+</html>
